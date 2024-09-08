@@ -14,10 +14,11 @@ public class Debug{
         //third: we print it back out!
         System.out.println("Hello, " + name + "! ");
 
+//testings
         //finish this one for me by receiving and printing the user's age back to them
         System.out.println("How old are you? ");
         String age = sc.nextLine();
-        System.out.println("I am, " + age + " years old ");
+        System.out.println("I am , " + age + " years old ");
 
 
         //can you do some math for me? take these variable and print out the sum of them!
@@ -25,8 +26,10 @@ public class Debug{
         int num2 = 37;
         //?
         System.out.println("The Sum: " + (num1 + num2));
-
-
+    
+        
 
     }
 }
+
+
