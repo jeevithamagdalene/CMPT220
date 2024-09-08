@@ -14,7 +14,6 @@ public class Debug{
         //third: we print it back out!
         System.out.println("Hello, " + name + "! ");
 
-//testings
         //finish this one for me by receiving and printing the user's age back to them
         System.out.println("How old are you? ");
         String age = sc.nextLine();
