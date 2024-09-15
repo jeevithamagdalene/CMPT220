@@ -37,7 +37,7 @@ public class Debug {
         }
 
         //for this section: why are we not entering the if statement?
-        //Because captilization matters in Java! since the first letter of "Marist" is different(one is captilized and another is small),
+        //Because capitalization matters in Java! since the first letter of "Marist" is different(one is captilized and another is small),
         //therefore it didn't pass the if statement
         if ("Marist" == "marist"){
         
