@@ -33,7 +33,7 @@ public class ArrayDebug {
         }
         System.out.println("The Sum is: "+sum);
         
-        //thinking one! here's an array
+        //thinking one! here's an arrays
         int maxMe[] = {280, 4892, 134, 23, 1937, 5329, 932, 89};
         //What would you have to do to find the largest number and then print that value?
         int largestInt= maxMe[0];;
