@@ -1,5 +1,5 @@
 import java.util.Arrays;
-//Our cheaty array helper file <3
+//Our cheat array helper file <3
 public class ArrayDebug {
     public static void main(String[] args)  {
 

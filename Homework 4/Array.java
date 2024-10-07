@@ -3,7 +3,7 @@
 Take the given array and keep track of:
 1. Any duplicate numbers
 2. How many times the duplicate numbers appear
-3. Print out those duplicate numbers with how many times they appears
+3. Print out those duplicate numbers with how many times they appear
 
  */
 
