@@ -12,7 +12,7 @@ I give you two fully working method examples with and without parameters and cal
 */
 
 import java.util.Scanner;
-public class Main {
+public class debugFunctions {
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
@@ -26,6 +26,19 @@ public class Main {
 
     System.out.println("im going to print out the word Dog now.");
     printDog();
+    System.out.println("Problem 2");
+    System.out.println("Enter a number and I will tell you the fatorial: ");
+    int var2 = sc.nextInt();
+    System.out.println("Factorial of the number is : " + factorial(var2));
+    System.out.println("Problem 3");
+      System.out.println("Enter a number and I will tell you the sum of every other number: ");
+      int var5 = sc.nextInt();
+      System.out.println("Sum of every other number: " + sum(var5));
+      sc.nextLine();
+      System.out.println("Problem 5");
+      System.out.println("Enter a String to Reverse");
+      String var7 = sc.nextLine();
+      printReverse(var7);
       
     }
 
@@ -42,6 +55,31 @@ public class Main {
     public static void printDog(){
         System.out.println("Dog");
     }
+    public static int factorial(int number){
+        int var3 = 1;
+        int var4;
+        for(var4 = 1; var4 <= number; ++var4) {
+            var3 *= var4;
+         }
+         return var3;
+    }
+    public static int sum(int number) {
+        int total = 0;
+        for (int i = 1; i < number; i += 2) { 
+            total += i;
+        }
+        return total;
+    }
+
+    public static void printReverse(String input) {
+        for (int i = input.length() - 1; i >= 0; --i) {
+            System.out.print("Reversed String: " + input.charAt(i));
+        }
+    }
+}
+
+
+
 
   
-}
+
