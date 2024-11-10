@@ -11,15 +11,34 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class filepractice {
     public static void main(String[] args){
         //do you need something to start?
-        File inputfile = new File(/*what goes in here?*/);
+        File inputfile = new File("inputf.txt");
+        List<String> list = new ArrayList<String>();
+        List<String> higherGPANames = new ArrayList<String>();
+        int count =0;
+    
         try {
             Scanner input = new Scanner(inputfile);
             while(input.hasNext()){
-                //what do we do at every line of the file?
+                list.add( input.nextLine());
+
+
             }
+            
+         
+            for(int i=0;i<list.size();i=i+2){
+                count++;
+                String name = list.get(i);
+                Double gpa =  Double.parseDouble(list.get(i+1));
+                
+                 if(gpa >3.5){
+                    higherGPANames.add(name);
+                 }
+            }
+            System.out.println("Total Name: "+count);
+            System.out.println("Names with Higher GPA: "+higherGPANames);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
