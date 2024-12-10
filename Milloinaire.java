@@ -30,7 +30,7 @@ public class Millionaire {
             {"What is the square root of 64?", new String[]{"6", "8", "10", "12"}, "8"}
         };
 
-        // Loop through the question
+        // Loop through the questions
         for (Object[] questionData : questions) {
             String questionText = (String) questionData[0];
             String[] options = (String[]) questionData[1];
