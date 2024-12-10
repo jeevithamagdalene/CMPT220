@@ -21,7 +21,7 @@ public class Millionaire {
 
         int moneyWon = 0;
 
-        // Array to store questions, options, and answers
+      
         Object[][] questions = {
             {"What is the capital of France?", new String[]{"Berlin", "Madrid", "Paris", "Lisbon"}, "Paris"},
             {"Who developed Java?", new String[]{"Microsoft", "Oracle", "Sun Microsystems", "Apple"}, "Sun Microsystems"},
@@ -30,7 +30,7 @@ public class Millionaire {
             {"What is the square root of 64?", new String[]{"6", "8", "10", "12"}, "8"}
         };
 
-        // Loop through the questions
+        
         for (Object[] questionData : questions) {
             String questionText = (String) questionData[0];
             String[] options = (String[]) questionData[1];
@@ -38,7 +38,7 @@ public class Millionaire {
 
             boolean isCorrect = askQuestion(questionText, options, correctAnswer);
             if (isCorrect) {
-                moneyWon += 50000; // Increase money for each correct answer
+                moneyWon += 50000;
                 System.out.println("Correct! You've won $" + moneyWon);
             } else {
                 System.out.println("Incorrect answer. You won $" + moneyWon);
@@ -52,15 +52,27 @@ public class Millionaire {
 
     public static boolean askQuestion(String question, String[] options, String correctAnswer) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(question);
-        for (int i = 0; i < options.length; i++) {
-            System.out.println((i + 1) + ". " + options[i]);
+
+        while (true) {
+            System.out.println(question);
+            for (int i = 0; i < options.length; i++) {
+                System.out.println((i + 1) + ". " + options[i]);
+            }
+
+            System.out.print("Your answer: ");
+            String playerAnswer = scanner.nextLine().trim();
+
+     
+            for (String option : options) {
+                if (playerAnswer.equalsIgnoreCase(option)) {
+                
+                    return playerAnswer.equalsIgnoreCase(correctAnswer);
+                }
+            }
+
+            
+            System.out.println("Invalid answer! Please choose an option from the given list.");
         }
-
-        System.out.print("Your answer: ");
-        String playerAnswer = scanner.nextLine().trim();
-
-        return playerAnswer.equalsIgnoreCase(correctAnswer);
     }
 
     public static void saveResultToFile(String playerName, int moneyWon) {
