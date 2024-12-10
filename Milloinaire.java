@@ -11,6 +11,7 @@ public class Millionaire {
         String playerName;
         while (true) {
             System.out.print("Enter the First name of the player: ");
+            // Sanitization
             playerName = scanner.nextLine();
             if (playerName.matches("^[a-zA-Z]+$")) {
                 break;
